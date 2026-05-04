@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    },
+    "start": {
+      "dependsOn": ["^start"],
+      "cache": true
+    },
+    "e2e": {
+      "dependsOn": ["^e2e"],
+      "cache": true
+    },
+    "lint": {
+      "dependsOn": ["^lint"],
+      "cache": true
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "cache": true
+    }
+  },
+  "analytics": true,
+  "plugins": [
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "eslint:lint"
+      }
+    },
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "playwright:e2e"
+      }
+    }
+  ]
+}
