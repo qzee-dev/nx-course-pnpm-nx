@@ -36,5 +36,6 @@
         "targetName": "playwright:e2e"
       }
     }
-  ]
+  ],
+  "nxCloudId": "69f8c1aef67e9f6c60a5b261"
 }
