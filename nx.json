@@ -37,5 +37,9 @@
       }
     }
   ],
-  "nxCloudId": "69f8c1aef67e9f6c60a5b261"
+  "nxCloudId": "69f8c1aef67e9f6c60a5b261",
+  "namedInputs": {
+    "sharedGlobals": ["{workspaceRoot}/.github/workflows/verify.yml"],
+    "default": ["sharedGlobals"]
+  }
 }
