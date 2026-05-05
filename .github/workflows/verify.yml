@@ -6,7 +6,8 @@ on:
     branches: [main]
 
 env: 
-  NX_CLOUD_ACCESS_TOKEN: ${{"secret.NX_CLOUD_ACCESS_TOKEN"}}
+  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
+
 
 
 jobs:
@@ -42,4 +43,4 @@ jobs:
         with:
           name: playwright-report
           path: e2e/web/playwright-report/
-          retention-days: 20
+          retention-days: 30
