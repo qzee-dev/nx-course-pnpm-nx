@@ -33,7 +33,7 @@ jobs:
         run: |
           pnpm format:check
           pnpm lint
-          pnpm exec nx affected -t  test build 
+          pnpm nx run-many -t test build --all
           pnpm --filter "@tasker/web" build
           pnpm --filter "@tasker/*" test
       - name: Run Playwright tests
