@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [main]
 
-env:
+env: 
   NX_CLOUD_ACCESS_TOKEN: ${{"secret.NX_CLOUD_ACCESS_TOKEN"}}
 
 
