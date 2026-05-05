@@ -569,18 +569,18 @@
           },
           "start": {
             "executor": "nx:run-script",
-            "options": {
-              "script": "start"
-            },
             "metadata": {
               "scriptContent": "next start",
               "runCommand": "pnpm run start"
             },
+            "dependsOn": [
+              "build"
+            ],
+            "options": {
+              "script": "start"
+            },
             "configurations": {},
             "parallelism": true,
-            "dependsOn": [
-              "^start"
-            ],
             "cache": true
           }
         },
@@ -33253,5 +33253,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1777970958946
+  "computedAt": 1777974044949
 }

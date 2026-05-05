@@ -5,13 +5,17 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   globalSetup: require.resolve('./global-setup'),
+
   timeout: process.env.CI ? 120_000 : 60_000,
   outputDir: 'test-results',
   testDir: './tests',
+
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: 1,
+
   reporter: 'html',
+
   use: {
     baseURL: 'http://localhost:3000',
   },
@@ -32,9 +36,9 @@ export default defineConfig({
   ],
 
   webServer: {
-    timeout: 30_000,
-    command: 'pnpm --filter "@tasker/web" start',
+    command: 'pnpm nx start @tasker/web',
     url: 'http://localhost:3000',
-    reuseExistingServer: true,
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,
   },
 });

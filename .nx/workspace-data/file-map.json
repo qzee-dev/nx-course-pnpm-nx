@@ -18,67 +18,202 @@
   ],
   "fileMap": {
     "projectFileMap": {
-      "@tasker/dashboard-widgets": [
+      "@tasker/tasks-widgets": [
         {
-          "file": "packages/dashboard-widgets/package.json",
-          "hash": "11128455100535809063",
+          "file": "packages/tasks-widgets/package.json",
+          "hash": "9932759626795491122",
           "deps": [
             "npm:@types/node",
             "npm:@types/react",
             "npm:@types/react-dom",
             "npm:@heroicons/react",
-            "npm:@nivo/line@0.85.1",
-            "@tasker/database",
             "@tasker/ui",
+            "@tasker/database",
+            "npm:date-fns",
             "npm:next"
           ]
         },
         {
-          "file": "packages/dashboard-widgets/src/__snapshots__/projects-statuses.spec.tsx.snap",
-          "hash": "2315031580698147421"
+          "file": "packages/tasks-widgets/src/created-tasks.tsx",
+          "hash": "17386276653012869010",
+          "deps": [
+            "@tasker/database",
+            "npm:next",
+            "@tasker/ui"
+          ]
         },
         {
-          "file": "packages/dashboard-widgets/src/index.ts",
-          "hash": "13918072088326414879"
+          "file": "packages/tasks-widgets/src/index.ts",
+          "hash": "13919034538647787247"
         },
         {
-          "file": "packages/dashboard-widgets/src/projects-statuses.spec.tsx",
-          "hash": "6319485338181988189",
+          "file": "packages/tasks-widgets/src/my-tasks.tsx",
+          "hash": "3585817029136171181",
+          "deps": [
+            "@tasker/database",
+            "@tasker/ui"
+          ]
+        },
+        {
+          "file": "packages/tasks-widgets/tsconfig.json",
+          "hash": "12611762881020804421"
+        }
+      ],
+      "@tasker/database": [
+        {
+          "file": "packages/database/package.json",
+          "hash": "6946605833180192255",
+          "deps": [
+            "npm:@types/node",
+            "npm:prisma",
+            "npm:@prisma/client",
+            "npm:date-fns",
+            "npm:sqlite3"
+          ]
+        },
+        {
+          "file": "packages/database/schema.prisma",
+          "hash": "16515487715013133087"
+        },
+        {
+          "file": "packages/database/scripts/_seed.data.ts",
+          "hash": "15979456661967363009"
+        },
+        {
+          "file": "packages/database/scripts/seed.ts",
+          "hash": "7035114379696182590",
+          "deps": [
+            "npm:date-fns",
+            "npm:@prisma/client"
+          ]
+        },
+        {
+          "file": "packages/database/src/db.ts",
+          "hash": "1681463268323842660",
+          "deps": [
+            "npm:@prisma/client"
+          ]
+        },
+        {
+          "file": "packages/database/src/model.ts",
+          "hash": "2628277144505557758",
+          "deps": [
+            "npm:@prisma/client"
+          ]
+        },
+        {
+          "file": "packages/database/tsconfig.json",
+          "hash": "9996440386873318550"
+        }
+      ],
+      "@tasker/ui": [
+        {
+          "file": "packages/ui/package.json",
+          "hash": "13280782669018103822",
+          "deps": [
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@headlessui/react",
+            "npm:@heroicons/react",
+            "@tasker/database",
+            "npm:date-fns",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "packages/ui/src/__snapshots__/card.spec.tsx.snap",
+          "hash": "3837993912570021900"
+        },
+        {
+          "file": "packages/ui/src/card.spec.tsx",
+          "hash": "4112133268104859096",
           "deps": [
             "npm:@testing-library/react",
             "npm:vitest"
           ]
         },
         {
-          "file": "packages/dashboard-widgets/src/projects-statuses.tsx",
-          "hash": "15485919701555625760",
+          "file": "packages/ui/src/card.tsx",
+          "hash": "11899738539615419862",
           "deps": [
             "npm:react",
-            "@tasker/database",
-            "@tasker/ui"
+            "npm:next"
           ]
         },
         {
-          "file": "packages/dashboard-widgets/src/team-members.tsx",
-          "hash": "13568524278343962120",
+          "file": "packages/ui/src/code.tsx",
+          "hash": "1764763782726606554"
+        },
+        {
+          "file": "packages/ui/src/lib/create-task-button.tsx",
+          "hash": "1863975493721582753",
           "deps": [
+            "npm:next",
+            "@tasker/database",
+            "npm:@headlessui/react",
+            "npm:react",
+            "npm:@heroicons/react"
+          ]
+        },
+        {
+          "file": "packages/ui/src/lib/project-details.tsx",
+          "hash": "6341330866303457479",
+          "deps": [
+            "npm:react",
+            "@tasker/database",
+            "npm:@headlessui/react",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "packages/ui/src/lib/task-details.tsx",
+          "hash": "17997749280145678363",
+          "deps": [
+            "@tasker/database",
+            "npm:@headlessui/react",
+            "npm:react",
+            "npm:@heroicons/react",
+            "npm:date-fns",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "packages/ui/src/lib/task-item.tsx",
+          "hash": "2723946919191485959",
+          "deps": [
+            "npm:next",
+            "npm:date-fns",
             "@tasker/database"
           ]
         },
         {
-          "file": "packages/dashboard-widgets/src/upcoming-tasks.tsx",
-          "hash": "4390394383087813280",
+          "file": "packages/ui/src/project.tsx",
+          "hash": "6059706604449615385",
           "deps": [
+            "npm:react",
             "@tasker/database",
-            "@tasker/ui"
+            "npm:next"
           ]
         },
         {
-          "file": "packages/dashboard-widgets/tsconfig.json",
+          "file": "packages/ui/src/task.tsx",
+          "hash": "13984756528315212028"
+        },
+        {
+          "file": "packages/ui/src/toast.tsx",
+          "hash": "15659627853587090923",
+          "deps": [
+            "npm:@heroicons/react",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "packages/ui/tsconfig.json",
           "hash": "12611762881020804421"
         },
         {
-          "file": "packages/dashboard-widgets/vitest.config.ts",
+          "file": "packages/ui/vitest.config.ts",
           "hash": "11332436452328376925",
           "deps": [
             "npm:vitest"
@@ -229,7 +364,7 @@
         },
         {
           "file": "apps/web/package.json",
-          "hash": "7382624495447766980",
+          "hash": "5828598934669299673",
           "deps": [
             "npm:@types/nanoid",
             "npm:@types/node",
@@ -434,120 +569,6 @@
           "hash": "15402855537017138098"
         }
       ],
-      "@tasker/ui": [
-        {
-          "file": "packages/ui/package.json",
-          "hash": "13280782669018103822",
-          "deps": [
-            "npm:@types/node",
-            "npm:@types/react",
-            "npm:@types/react-dom",
-            "npm:@headlessui/react",
-            "npm:@heroicons/react",
-            "@tasker/database",
-            "npm:date-fns",
-            "npm:next"
-          ]
-        },
-        {
-          "file": "packages/ui/src/__snapshots__/card.spec.tsx.snap",
-          "hash": "3837993912570021900"
-        },
-        {
-          "file": "packages/ui/src/card.spec.tsx",
-          "hash": "4112133268104859096",
-          "deps": [
-            "npm:@testing-library/react",
-            "npm:vitest"
-          ]
-        },
-        {
-          "file": "packages/ui/src/card.tsx",
-          "hash": "11899738539615419862",
-          "deps": [
-            "npm:react",
-            "npm:next"
-          ]
-        },
-        {
-          "file": "packages/ui/src/code.tsx",
-          "hash": "1764763782726606554"
-        },
-        {
-          "file": "packages/ui/src/lib/create-task-button.tsx",
-          "hash": "1863975493721582753",
-          "deps": [
-            "npm:next",
-            "@tasker/database",
-            "npm:@headlessui/react",
-            "npm:react",
-            "npm:@heroicons/react"
-          ]
-        },
-        {
-          "file": "packages/ui/src/lib/project-details.tsx",
-          "hash": "6341330866303457479",
-          "deps": [
-            "npm:react",
-            "@tasker/database",
-            "npm:@headlessui/react",
-            "npm:next"
-          ]
-        },
-        {
-          "file": "packages/ui/src/lib/task-details.tsx",
-          "hash": "17997749280145678363",
-          "deps": [
-            "@tasker/database",
-            "npm:@headlessui/react",
-            "npm:react",
-            "npm:@heroicons/react",
-            "npm:date-fns",
-            "npm:next"
-          ]
-        },
-        {
-          "file": "packages/ui/src/lib/task-item.tsx",
-          "hash": "2723946919191485959",
-          "deps": [
-            "npm:next",
-            "npm:date-fns",
-            "@tasker/database"
-          ]
-        },
-        {
-          "file": "packages/ui/src/project.tsx",
-          "hash": "6059706604449615385",
-          "deps": [
-            "npm:react",
-            "@tasker/database",
-            "npm:next"
-          ]
-        },
-        {
-          "file": "packages/ui/src/task.tsx",
-          "hash": "13984756528315212028"
-        },
-        {
-          "file": "packages/ui/src/toast.tsx",
-          "hash": "15659627853587090923",
-          "deps": [
-            "npm:@heroicons/react",
-            "npm:react"
-          ]
-        },
-        {
-          "file": "packages/ui/tsconfig.json",
-          "hash": "12611762881020804421"
-        },
-        {
-          "file": "packages/ui/vitest.config.ts",
-          "hash": "11332436452328376925",
-          "deps": [
-            "npm:vitest"
-          ]
-        }
-      ],
       "@tasker/sidebar": [
         {
           "file": "packages/sidebar/package.json",
@@ -580,99 +601,82 @@
           "hash": "12611762881020804421"
         }
       ],
-      "@tasker/database": [
+      "@tasker/dashboard-widgets": [
         {
-          "file": "packages/database/package.json",
-          "hash": "6946605833180192255",
-          "deps": [
-            "npm:@types/node",
-            "npm:prisma",
-            "npm:@prisma/client",
-            "npm:date-fns",
-            "npm:sqlite3"
-          ]
-        },
-        {
-          "file": "packages/database/schema.prisma",
-          "hash": "16515487715013133087"
-        },
-        {
-          "file": "packages/database/scripts/_seed.data.ts",
-          "hash": "15979456661967363009"
-        },
-        {
-          "file": "packages/database/scripts/seed.ts",
-          "hash": "7035114379696182590",
-          "deps": [
-            "npm:date-fns",
-            "npm:@prisma/client"
-          ]
-        },
-        {
-          "file": "packages/database/src/db.ts",
-          "hash": "1681463268323842660",
-          "deps": [
-            "npm:@prisma/client"
-          ]
-        },
-        {
-          "file": "packages/database/src/model.ts",
-          "hash": "2628277144505557758",
-          "deps": [
-            "npm:@prisma/client"
-          ]
-        },
-        {
-          "file": "packages/database/tsconfig.json",
-          "hash": "9996440386873318550"
-        }
-      ],
-      "@tasker/tasks-widgets": [
-        {
-          "file": "packages/tasks-widgets/package.json",
-          "hash": "9932759626795491122",
+          "file": "packages/dashboard-widgets/package.json",
+          "hash": "11128455100535809063",
           "deps": [
             "npm:@types/node",
             "npm:@types/react",
             "npm:@types/react-dom",
             "npm:@heroicons/react",
-            "@tasker/ui",
+            "npm:@nivo/line@0.85.1",
             "@tasker/database",
-            "npm:date-fns",
+            "@tasker/ui",
             "npm:next"
           ]
         },
         {
-          "file": "packages/tasks-widgets/src/created-tasks.tsx",
-          "hash": "17386276653012869010",
+          "file": "packages/dashboard-widgets/src/__snapshots__/projects-statuses.spec.tsx.snap",
+          "hash": "2315031580698147421"
+        },
+        {
+          "file": "packages/dashboard-widgets/src/index.ts",
+          "hash": "13918072088326414879"
+        },
+        {
+          "file": "packages/dashboard-widgets/src/projects-statuses.spec.tsx",
+          "hash": "6319485338181988189",
           "deps": [
+            "npm:@testing-library/react",
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "packages/dashboard-widgets/src/projects-statuses.tsx",
+          "hash": "15485919701555625760",
+          "deps": [
+            "npm:react",
             "@tasker/database",
-            "npm:next",
             "@tasker/ui"
           ]
         },
         {
-          "file": "packages/tasks-widgets/src/index.ts",
-          "hash": "13919034538647787247"
+          "file": "packages/dashboard-widgets/src/team-members.tsx",
+          "hash": "13568524278343962120",
+          "deps": [
+            "@tasker/database"
+          ]
         },
         {
-          "file": "packages/tasks-widgets/src/my-tasks.tsx",
-          "hash": "3585817029136171181",
+          "file": "packages/dashboard-widgets/src/upcoming-tasks.tsx",
+          "hash": "4390394383087813280",
           "deps": [
             "@tasker/database",
             "@tasker/ui"
           ]
         },
         {
-          "file": "packages/tasks-widgets/tsconfig.json",
+          "file": "packages/dashboard-widgets/tsconfig.json",
           "hash": "12611762881020804421"
+        },
+        {
+          "file": "packages/dashboard-widgets/vitest.config.ts",
+          "hash": "11332436452328376925",
+          "deps": [
+            "npm:vitest"
+          ]
         }
       ]
     },
     "nonProjectFiles": [
       {
+        "file": ".github/workflows/_nx-cloud-ci.yml",
+        "hash": "5142876112322831685"
+      },
+      {
         "file": ".github/workflows/verify.yml",
-        "hash": "9777689473035675437"
+        "hash": "4744102637974692548"
       },
       {
         "file": ".gitignore",
@@ -704,7 +708,7 @@
       },
       {
         "file": "nx.json",
-        "hash": "11733825734171775784"
+        "hash": "5794103253528934808"
       },
       {
         "file": "package.json",
