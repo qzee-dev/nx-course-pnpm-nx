@@ -42,4 +42,4 @@ jobs:
         with:
           name: playwright-report
           path: e2e/web/playwright-report/
-          retention-days: 30
+          retention-days: 20
