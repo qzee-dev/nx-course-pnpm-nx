@@ -65,9 +65,7 @@ export async function createTask(
 
   await page.click('[data-testid=create-task-submit]');
 
-  while (await form.isVisible()) {
-    await page.waitForTimeout(process.env.CI ? 500 : 200);
-  }
+  await expect(form).toBeHidden({ timeout: 10_000 });
 
   await page.waitForTimeout(process.env.CI ? 10_000 : 500);
 }
